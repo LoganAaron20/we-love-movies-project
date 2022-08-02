@@ -77,8 +77,6 @@ async function update(req, res, next) {
   const { reviewId } = req.params;
   const reviewData = req.body.data;
 
-  //   console.log(reviewData);
-
   const updatedReview = {
     ...reviewData,
     review_id: reviewId,
