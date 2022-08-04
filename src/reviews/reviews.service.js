@@ -26,12 +26,6 @@ const update = (updatedReview) => {
     .where({ review_id: updatedReview.review_id })
     .update(updatedReview)
     .then(() => read(updatedReview.review_id));
-
-  //! Does not work
-  // .join("critics as c", "c.critic_id", "r.critic_id")
-  // .select("r.*", "c.*")
-
-  // TODO: figure out why works in postman locally but not in test
 };
 
 module.exports = {
